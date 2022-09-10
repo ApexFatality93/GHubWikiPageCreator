@@ -14,6 +14,8 @@ h3,
 .actions button,
 .actions a {
 	font-family: Nunito;
+	transition: filter 0.3s;
+	color: black;
 }
 
 th {
