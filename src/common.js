@@ -57,6 +57,10 @@ const regions = {
 }
 
 const versions = [
+	'Echoes',
+	'Singularity',
+	'Interceptor',
+	'Fractal',
 	'Waypoint',
 	'Endurance',
 	'Outlaws',
