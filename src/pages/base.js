@@ -33,7 +33,7 @@ globalElements.input.censusDiscordInput.onchange = () => {
 			errorMessage(element);
 		}
 	} else {			// invalid
-		errorMessage(element, 'Invalid Discord tag. Include #xxxx at the end');
+		errorMessage(element, 'Include #xxxx at the end if applicable. Ignore this message if this is correct.');
 	}
 }
 
