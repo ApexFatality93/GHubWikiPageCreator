@@ -147,6 +147,7 @@
 			'Copper',
 			'Silver',
 			'Tritium',
+			'Carbon',
 		]
 	}
 	datalists(mineralDatalists);
