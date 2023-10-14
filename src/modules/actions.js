@@ -6,7 +6,7 @@
 <a class="button is-outlined is-primary" id="create" onclick="createPage(this)">Create page</a>
 <button class="button is-warning" id="reset" type="reset" onclick="reset()">Reset inputs</button>`;
 
-	const copyNote = `<p class="has-text-centered">You must copy the code first, then paste it into the wiki page.</p>`
+	const copyNote = `<p class="has-text-centered">You must copy the code first, then paste it into the wiki page. Also don't forget to upload any images you have put here.</p>`
 
 	globalElements.output.actions.innerHTML = actions;
 	globalElements.output.actions.insertAdjacentHTML('beforebegin', copyNote);
