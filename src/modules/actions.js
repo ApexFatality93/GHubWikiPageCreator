@@ -1,9 +1,10 @@
 (() => {
 	const actions = `
-<button class="button is-warning" id="reset" type="reset" onclick="reset()">Reset inputs</button>
 <button class="button is-outlined is-primary" id="copy" type="button" onclick="copyCode(this, 'fullArticle')">Copy wikicode</button>
 <a class="button is-outlined is-primary" id="download" onclick="downloadFile(this)">Download file</a>
-<a class="button is-outlined is-primary" id="create" onclick="createPage(this)">Create page</a>`;
+<a class="button is-outlined is-primary" href="https://nomanssky.fandom.com/wiki/Special:Upload?multiple=true" id="uploadLink" rel="noopener noreferrer" target="_blank">Upload Pictures</a>
+<a class="button is-outlined is-primary" id="create" onclick="createPage(this)">Create page</a>
+<button class="button is-warning" id="reset" type="reset" onclick="reset()">Reset inputs</button>`;
 
 	const copyNote = `<p class="has-text-centered">You must copy the code first, then paste it into the wiki page.</p>`
 
