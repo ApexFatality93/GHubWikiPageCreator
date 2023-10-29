@@ -644,8 +644,24 @@ function displayResearch() {
 	const pos = teams.indexOf(chapter);
 
 	const chapterSentence = (() => {
-		if (pos < 4) {
-			return `[[${chapter}]] researcher`;
+		// if (pos < 4) {
+		// 	return `[[${chapter}]] researcher`;
+		if (chapter.includes('GHEC')) {
+			return `[[Galactic Hub Exobiology Corps|${chapter}]] Researcher`;
+		} else if (chapter.includes('GHGS')) {
+			return `[[Galactic Hub Geological Surveyors|${chapter}]] Researcher`;
+		} else if (chapter.includes('GHSH')) {
+			return `[[Galactic Hub Ship Hunters|${chapter}]] Researcher`;
+		} else if (chapter.includes('GHDF')) {
+			return `[[Galactic Hub Defense Force|${chapter}]] Member`;
+		} else if (chapter.includes('GHBG')) {
+			return `[[Galactic Hub Builders Guild|${chapter}]] Member`;
+		} else if (chapter.includes('GHSL')) {
+			return `[[Galactic Hub Star League|${chapter}]] Member`;
+		} else if (chapter.includes('GHTD')) {
+			return `[[Galactic Hub Treasury Department|${chapter}]] Member`;
+		} else if (chapter.includes('HBS')) {
+			return `[[Hublic Broadcasting Service|${chapter}]] Member`;
 		} else if (chapter.includes('Scribe')) {
 			return 'EisHub [[Galactic Hub Eissentam Scribes|Scribe]]';
 		} else if (chapter.includes('Archivist')) {
