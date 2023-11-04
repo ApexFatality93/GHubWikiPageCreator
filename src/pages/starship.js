@@ -52,7 +52,8 @@ function getShipData() {
 		economyInput: ['show'],
 		planetInput: ['hide', ''],
 		moonInput: ['hide', ''],
-		axesInput: ['hide', '']
+		axesInput: ['hide', ''],
+		classInput: ['hide', '']
 	}
 
 	const shipData = {
@@ -287,6 +288,36 @@ function getShipData() {
 				moonInput: ['show'],
 				axesInput: ['show']
 			}
+		},
+		"Interceptor": {
+			cost: {
+				'Large': '',
+			},
+			slots: {
+				'Large': '32-40',
+			},
+			techslots: {
+				'Large': '22-28',
+			},
+			subtypes: [],
+			secParts: [],
+			accessories: [],
+			miscParts: [],
+			sections: {
+				subtypeInput: ['hide'],	
+				exoticInput: ['hide', ''],
+				pilotInput: ['hide', ''],
+				inventoryInput: ['hide', 'Large'],
+				classInput: ['show'],
+				maneuverBInput: ['show'],
+				damageBInput: ['show'],
+				shieldBInput: ['show'],
+				warpBInput: ['show'],
+				economyInput: ['show'],
+				planetInput: ['show'],
+				moonInput: ['show'],
+				axesInput: ['show']
+			}
 		}
 	}
 	shipData.Explorer.miscParts = structuredClone(shipData.Explorer.accessories);
@@ -438,37 +469,60 @@ function shipType() {
 	}
 }
 
-// constructs location sentence
 function loc() {
+
 	const systemName = pageData.system;
 	const regionName = pageData.region;
 	const civ = pageData.civShort;
 	const type = pageData.type;
+	const shipClass = pageData.class
 
-	function capitalDetection() {
-		const inventory = pageData.inventory;
-		if (inventory == 'Large') return 'Capital';
+	// this output has a linebreak. This is intended, because we use .innerText to display this. If we used <br>, it would display '<br>', not the linebreak.
+	let output = `This ${shipType()} was discovered in the [[${systemName}]] [[star system]] in the [[${regionName}]] [[region]]${regNr(regionName)} of the ${HubGal(civ)}.
+
+	It can be found ${locText()}.`;
+
+	if (type==='Interceptor') {
+		output = `This ${shipType()} was discovered in the [[${systemName}]] [[star system]] in the [[${regionName}]] [[region]]${regNr(regionName)} of the ${HubGal(civ)}.
+
+		The {{Class|${shipClass}}} class version of this starship can be found ${locText()}.`;
 	}
 
+	globalElements.output.location.innerText = output;
+
+	// Determines whether the discovered ship is a capital ship based on inventory size
+	// If ship is a capital ship, returns the string 'Capital'; otherwise returns undefined.
+	function capitalDetection() {
+		const inventory = pageData.inventory;
+		if (inventory === 'Large') return 'Capital';
+	}
+
+	// Determines the method of freighter spawn
+	// Returns a sentence describing the freighter spawn location.
 	function freighterSpawn() {
-		if (capitalDetection() == 'Capital') {
+		if (capitalDetection() === 'Capital') {
 			return 'after warping into the star system if a space battle is triggered'
 		} else {
 			return 'randomly while pulsing around in the star system'
 		}
 	}
 
+	// Determines the method of living ship spawn
+	// Returns a sentence describing the living ship spawn location and coordinates.
 	function livingShipSpawn() {
 		const axes = pageData.axes;
 		const celestialBody = planetMoonSentence();
 		return `on the ${celestialBody} at the coordinates ${axes}`
 	}
 
+	// Constructs the location sentence based on ship type
+	// Returns the location sentence.
 	function locText() {
 		switch (type) {
 			case 'Freighter':
 				return freighterSpawn();
 
+			case 'Interceptor':
 			case 'Living Ship':
 				return livingShipSpawn();
 
@@ -476,12 +530,6 @@ function loc() {
 				return 'at either the [[Space Station]] or any [[Trade Outpost]]s available in the star system';
 		}
 	}
-	// this output has a linebreak. This is intended, because we use .innerText to display this. If we used <br>, it would display '<br>', not the linebreak.
-	const output = `This ${shipType()} was discovered in the [[${systemName}]] [[star system]] in the [[${regionName}]] [[region]]${regNr(regionName)} of the ${HubGal(civ)}.
-
-	It can be found ${locText()}.`
-
-	globalElements.output.location.innerText = output;
 }
 
 // constructs additional information sentence
@@ -591,6 +639,11 @@ function albumOtherExternal() {
 			prop2 = faction;
 			break;
 
+		case 'Interceptor':
+			prop1 = `${economy}<br>${loc}`;
+			prop2 = axes;
+			break;
+
 		case "Living Ship":
 			prop1 = loc;
 			prop2 = axes;
@@ -654,6 +707,7 @@ function generateGalleryArray() {
 	const common = ['moon', 'planet', 'crash'];
 	const deactivate = {
 		'Living Ship': ['npc', 'freighter'],
+		'Interceptor': ['npc', 'freighter'],
 		'Freighter': ['ship', ...common],
 		'default': ['freighter', ...common],
 	}
@@ -689,7 +743,7 @@ function galleryExplanationExternal() {
 			</ol>
 		</div>
 		<div>
-			<div class='has-text-weight-bold'>Living Ships:</div>
+			<div class='has-text-weight-bold'>Living Ships/Interceptors:</div>
 			<ol class='dialog-list mt-1'>
 				<li>Rear view of ship</li>
 				<li>Inventory screen</li>
