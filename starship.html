@@ -52,9 +52,48 @@
 					<div class="tableCell text">
 						<label for="nameInput">Name of the starship:</label>
 						<span class="tooltip">
-							<data>Enter exactly as seen in game. Watch out for 0 (zero) and O (o).</data>
+							<data>Enter exactly as seen in game. Watch out for 0 (zero) and O (o). Click here to view
+								Greek characters.</data>
 							<data>Ship Name</data>
-							<data>Enter exactly as seen in game. Watch out for 0 (zero) and O (o).</data>
+							<data>
+								Enter exactly as seen in game. Watch out for 0 (zero) and O (o). Also put Greek
+								characters exactly as they are in game when documenting interceptors. You can copy from
+								this list:
+								<div>
+									<span title="Alpha">α</span>,
+									<span title="Beta">β</span>,
+									<span title="Gamma">γ</span>,
+									<span title="Delta">δ</span>,
+									<span title="Epsilon">ε</span>,
+									<span title="Zeta">ζ</span>,
+									<span title="Eta">η</span>,
+									<span title="Theta">θ</span>,
+									<span title="Iota">ι</span>,
+									<span title="Kappa">κ</span>,
+									<span title="Lambda">λ</span>,
+									<span title="Mu">μ</span>,
+									<span title="Nu">ν</span>,
+									<span title="Xi">ξ</span>,
+									<span title="Omicron">ο</span>,
+									<span title="Pi">π</span>,
+									<span title="Rho">ρ</span>,
+									<span title="Sigma">σ/ς/ϲ</span>,
+									<span title="Tau">τ</span>,
+									<span title="Upsilon">υ</span>,
+									<span title="Phi">φ</span>,
+									<span title="Chi">χ</span>,
+									<span title="Psi">ψ</span>,
+									<span title="Omega">ω</span>
+								</div>
+								Please also create a redirect with the Greek letter written out (for example from
+								"Beta-Hope" to "β-Hope").
+								For more detailed information, see <a
+									href="No_Mans_Sky_Wiki:Explained_-_Interceptor_Ship_Names" data-wiki>No Mans Sky
+									Wiki:Explained - Interceptor Ship Names</a>
+								<div class="mt-2 has-text-weight-bold">Important for Interceptors:</div>
+								You must reload your game after claiming the interceptor in order to get the correct
+								name!
+							</data>
 							<data>./assets/bitmap/ship/shipName.jpg</data>
 						</span>
 					</div>
@@ -97,6 +136,7 @@
 							<option value="Shuttle">Shuttle
 							<option value="Solar">Solar
 							<option value="Exotic">Exotic
+							<option value="Interceptor">Interceptor
 							<option value="Living Ship">Living Ship
 							<option value="Freighter">Freighter
 						</select>
@@ -292,6 +332,17 @@
 						</select>
 					</div>
 					<div class="tableCell text">
+						<label>Class:</label>
+					</div>
+					<div class="tableCell data">
+						<select id="classInput" data-dest="class">
+							<option value="S">S</option>
+							<option value="A">A</option>
+							<option value="B">B</option>
+							<option value="C">C</option>
+						</select>
+					</div>
+					<div class="tableCell text">
 						<label for="maneuverBInput">Maneuverability:</label>
 						<span class="tooltip">
 							<data>Enter the "Core" value as seen on the ship's scan.</data>
@@ -309,7 +360,7 @@
 							id="maneuverBInput">
 					</div>
 					<div class="tableCell text">
-						<label for="damageBInput">Damage:</label>
+						<label for="damageBInput">Damage Potential:</label>
 						<span class="tooltip">
 							<data>Enter the "Core" value as seen on the ship's scan.</data>
 							<data>Damage</data>
@@ -325,7 +376,7 @@
 						<input type="text" data-dest-noauto="damageB" maxlength="5" placeholder="0.0" id="damageBInput">
 					</div>
 					<div class="tableCell text">
-						<label for="shieldBInput">Shield:</label>
+						<label for="shieldBInput">Shield Strength:</label>
 						<span class="tooltip">
 							<data>Enter the "Core" value as seen on the ship's scan.</data>
 							<data>Maneuverability</data>
@@ -341,7 +392,7 @@
 						<input type="text" data-dest-noauto="shieldB" maxlength="5" placeholder="0.0" id="shieldBInput">
 					</div>
 					<div class="tableCell text">
-						<label for="warpBInput">Warp:</label>
+						<label for="warpBInput">Hyperdrive Range:</label>
 						<span class="tooltip">
 							<data>Enter the "Core" value as seen on the ship's scan.</data>
 							<data>Warp</data>
