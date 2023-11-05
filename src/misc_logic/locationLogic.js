@@ -11,9 +11,9 @@ function planetMoonSentence(planet = pageData.planet, moon = pageData.moon) {
 	const body = planetMoon(moon);
 	const text = (() => {
 		if (body == 'Moon') {
-			return `moon [[${sanitiseString(moon)}]]`;
+			return `[[moon]] [[${sanitiseString(moon)}]]`;
 		} else {
-			return `planet [[${sanitiseString(planet)}]]`;
+			return `[[planet]] [[${sanitiseString(planet)}]]`;
 		}
 	})();
 	if (!dest) return text;
