@@ -428,6 +428,8 @@
 			'Silicates',
 			'High in calcium',
 			'Water vines',
+			'Nitrous Oxide',
+			'[[Kelp Sac]]',
 			'[[Kelp Sac|Kelp sacs]]',
 			'Nutritious water weeds',
 			'Other fish',
