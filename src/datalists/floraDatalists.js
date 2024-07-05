@@ -357,6 +357,7 @@
 			'Cyto-Phosphate',
 			'Marrow Bulb',
 			'Kelp Sac',
+			'Salt',
 		]
 	}
 	datalists(floraDatalists);
