@@ -91,6 +91,8 @@ const regions = {
 }
 
 const versions = [
+	'Adrift',
+	'Orbital',
 	'Omega',
 	'Echoes',
 	'Singularity',
