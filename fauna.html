@@ -372,19 +372,6 @@
 					<div class="tableCell data">
 						<input data-dest-noauto="notes" type="text" list="notesData" id="notesInput">
 					</div>
-					<div class="tableCell text" style="display: none">
-						<label for="specialNotesInput">Notes for discovery menu:</label>
-						<span class="tooltip">
-							<data>./assets/bitmap/creature/creatureDMNotes.jpg</data>
-							<data>Discovery Menu Notes</data>
-							<data>Found in the discovery menu.<br>This might differ from the creature scan.</data>
-							<data>This might differ from the scan. Please check in the discovery menu.</data>
-						</span>
-					</div>
-					<div class="tableCell data" style="display: none">
-						<input data-dest-noauto="addObservation" type="text" list="specialNotesData"
-							id="specialNotesInput">
-					</div>
 					<div class="tableCell text">
 						<label>Produces:</label>
 						<span class="tooltip">
@@ -458,19 +445,6 @@
 						<label for="appearanceInput">Appearance</label>
 						<textarea data-dest="appearance" id="appearanceInput"
 							placeholder="What does the creature look like?"></textarea>
-					</div>
-					<div class="tableHeader data no-flex">
-						<label for="dmInput">Discovery Menu</label>
-						<span class="tooltip">
-							<data>Found in the Discovery Menu. Enter exactly as seen in game</data>
-							<data>Discovery Menu Text</data>
-							<data>
-								Found in the Discovery Menu. Enter exactly as seen in game,
-								but ignore any linebreaks.
-							</data>
-							<data>./assets/bitmap/creature/creatureDM.jpg</data>
-						</span>
-						<textarea data-dest-noauto="DM" id="dmInput"></textarea>
 					</div>
 					<div class="tableCell text">
 						<label for="galleryUpload">Gallery files</label>
@@ -553,12 +527,6 @@
 					<div>{{aliasc|text=Original|name=<output id='oldName'></output>}}</div>
 					<div>{{aliasc|text=Current|name=<output id='newName' name="newName"></output>}}
 					</div>
-					<br>
-
-					<div>==Discovery Menu==</div>
-					<div><output id='DM'></output></div>
-					<br>
-					<div><output id='addObservation'></output></div>
 					<br>
 
 					<div>==Location==</div>
