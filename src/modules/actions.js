@@ -128,7 +128,7 @@ function downloadFile(button) {
 	a.download = name + '.txt';
 }
 
-const wikiLink = 'https://nomanssky.fandom.com/wiki/';
+const wikiLink = 'https://nmsgalactichub.miraheze.org/wiki/';
 
 function createPage(element) {
 	element.style.pointerEvents = 'none';
