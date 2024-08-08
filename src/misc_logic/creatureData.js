@@ -10,6 +10,10 @@ function getCreatureData() {
 					commonName: 'Exotic Biome Creatures',
 					produces: ['', 'Fiendish Roe', 'Hexaberry', 'Latticed Sinew']
 				},
+				Arthropodae: {
+					commonName: 'Bugs',
+					produces: ['Nourshing Slime']
+				},
 				Bos: {
 					commonName: 'Beetles',
 					produces: ["Crab 'Apple'"]
@@ -25,6 +29,10 @@ function getCreatureData() {
 				Felihex: {
 					commonName: 'Sixlegged Cats',
 					produces: ['Leopard-Fruit']
+				},
+				Floradae: {
+					commonName: 'Plant Cats',
+					produces: ['Syrupy Nectar']
 				},
 				Hexungulatis: {
 					commonName: 'Sixlegged Cows',
@@ -73,6 +81,10 @@ function getCreatureData() {
 				Spiralis: {
 					commonName: 'Drills',
 					produces: ['Latticed Sinew']
+				},
+				Stucturae: {
+					commonName: 'Walking Buildings',
+					produces: ['Chewy Wires']
 				},
 				Talpidae: {
 					commonName: 'Moles',
