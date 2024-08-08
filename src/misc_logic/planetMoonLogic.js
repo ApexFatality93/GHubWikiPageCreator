@@ -247,7 +247,7 @@ function addFauna(element) {
 			<data>See the wiki for a list of genera.</data>
 			<data>Genus</data>
 			<data>The genus is defined by the general appearance of a creature.<br>
-				See the wiki for a <a href='https://nomanssky.fandom.com/wiki/Genus#Genus_List'
+				See the wiki for a <a href='https://nomanssky.miraheze.org/wiki/Genus#Genus_List'
 					target='_blank' rel='noopener noreferrer'>list of genera</a>.</data>
 		</span>
 	</div>
