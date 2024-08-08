@@ -63,7 +63,7 @@ function glyphRegion(glyphs) {
 		region = regionList[regionGlyphs];
 	}
 	if (region == undefined) {
-		errorMessage(glyphElement, 'No valid Hub region. See <a href="https://nomanssky.fandom.com/wiki/Galactic_Hub_Regions" target="_blank" rel="noopener noreferrer">Galactic Hub Regions</a> for a list of valid regions.');
+		errorMessage(glyphElement, 'No valid Hub region. See <a href="https://nmsgalactichub.miraheze.org/wiki/Galactic_Hub_Regions" target="_blank" rel="noopener noreferrer">Galactic Hub Regions</a> for a list of valid regions.');
 	} else {
 		errorMessage(glyphElement);
 	}
