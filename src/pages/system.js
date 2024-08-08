@@ -159,7 +159,7 @@ function planetInputs() {
 				<data>Planet Biome</data>
 				<data>
 					Can be determined from the planetary features such as the weather, harvestable plants or available resources.<br>
-					See the <a href=https://nomanssky.fandom.com/wiki/Biome rel=noreferrer target=_blank>Biome wiki page</a> for more information.
+					See the <a href=https://nomanssky.miraheze.org/wiki/Biome rel=noreferrer target=_blank>Biome wiki page</a> for more information.
 				</data>
 			</span>
 		</div>
