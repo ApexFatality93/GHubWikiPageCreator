@@ -358,8 +358,6 @@
 			'Marrow Bulb',
 			'Kelp Sac',
 			'Salt',
-			'Gold',
-			'Silver',
 		]
 	}
 	datalists(floraDatalists);
