@@ -668,7 +668,7 @@ function albumLinkGen() {
 	}
 
 	function getCatalog() {
-		if (civShort == 'CalHub') return 'CalHub Starship Catalog';										// CalHub Freighter
+		if (civShort == 'CalHub') return 'Starship Album (Calypso)';										// CalHub Freighter
 		if (type == 'Freighter') return civ + ' Freighter Catalog';										// GHub/EisHub Freighter
 		if (civShort != 'EisHub' || type != 'Fighter') return civ + ' Starship Catalog - ' + type;		// not EisHub Fighter
 		const rarity = (() => {
