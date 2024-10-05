@@ -3,6 +3,8 @@ function startupFunctions() {
 	acquirementBundle();
 	addInfo();
 	autoRoyal();
+	autoSentinel();
+	autoAtlantid();
 	showSizeDropdown();
 	MTType();
 	bundleNumberStats();
@@ -18,7 +20,7 @@ function startupFunctions() {
 const MTElementFunctions = {
 	nameInput: ['albumName()'],
 	civ: ['locGalaxy(); addInfo(); appearance(); locHubNr()', null, true],
-	typeInput: ['addInfo(); appearance(); autoRoyal(); showSizeDropdown(); MTType(); albumItemType(); albumOther()', null, true],
+	typeInput: ['addInfo(); appearance(); autoRoyal(); autoSentinel(); autoAtlantid(); showSizeDropdown(); MTType(); albumItemType(); albumOther()', null, true],
 	sizeInput: ['showSizeDropdown(); MTType(); albumOther()'],
 	researchTeam: ['addInfo()', null, true],
 	locInput: ['acquirementBundle(); hideLocName()'],
@@ -70,11 +72,23 @@ function addInfo() {
 		return preType;
 	})();
 
-	const catalog = (() => {
-		if (civ != 'CalHub') {
-			return `${civ} Multi-Tool Catalog - ${type}`;
-		} else {
-			return `${civ} Multi-Tool Catalog`;
+	// const catalog = (() => {
+	// 	if (civ != 'CalHub') {
+	// 		return `${civ} Multi-Tool Catalog - ${type}`;
+	// 	} else {
+	// 		return `${civ} Multi-Tool Catalog`;
+	// 	}
+	// })();
+
+	const catalog = (() => { 
+		if (civ == 'CalHub') {
+			return `Multi-Tool Album (Calypso)`;
+		}
+		else if (civ == 'EisHub') {
+			return `Multi-Tool Album (Eissentam)`;
+		}
+		else {
+			return `Multi-Tool Album (Euclid)`;
 		}
 	})();
 
@@ -231,6 +245,34 @@ function autoRoyal() {
 	}
 }
 
+// automatically switches to Harmonic Camp when Sentinel is selected
+function autoSentinel() {
+	const type = pageData.type;
+	const locElement = globalElements.input.locInput;
+
+	if (type == 'Sentinel') {
+		// hideInput(locElement, 'none');
+		locElement.value = 'Harmonic Camp';
+		wikiCode(locElement);
+	} else {
+		hideInput(locElement, '');
+	}
+}
+
+// automatically switches to Harmonic Camp when Sentinel is selected
+function autoAtlantid() {
+	const type = pageData.type;
+	const locElement = globalElements.input.locInput;
+
+	if (type == 'Atlantid') {
+		// hideInput(locElement, 'none');
+		locElement.value = 'Monolith';
+		wikiCode(locElement);
+	} else {
+		hideInput(locElement, '');
+	}
+}
+
 // shows or hides size dropdown
 function showSizeDropdown() {
 	const type = pageData.type;
@@ -243,7 +285,7 @@ function showSizeDropdown() {
 	}
 	if (type == 'Experimental' && size == 'SMG') sizeInput.value = 'Pistol';
 
-	if (type != 'Royal' && type != 'Starter Pistol') {
+	if (type != 'Royal' && type != 'Starter Pistol' && type != 'Sentinel' && type != 'Atlantid') {
 		hideInput(sizeInput, '');
 	} else {
 		hideInput(sizeInput, 'none');
@@ -316,7 +358,7 @@ function galleryExplanationExternal() {
 			<li>Discovery Menu</li>
 			<li>Price Page</li>
 			<li>Base Stats</li>
-			<li>Minor Settlement/Sentinel Pillar</li>
+			<li>Minor Settlement/Sentinel Pillar/Harmonic Camp/Monolith</li>
 			<li>Tool in Hand</li>
 			<li>First Person View</li>
 		</ol>
@@ -360,10 +402,16 @@ function albumLinkGen() {
 	const civ = shortenGHub(pageData.civShort);
 	const type = pageData.type;
 
+	// const catalogName = (() => {
+	// 	if (civ == 'CalHub') return civ + ' Multi-Tool Catalog';
+	// 	const longType = (type == 'Standard') ? `${type} Multi-Tool` : type;
+	// 	return civ + ' Multi-Tool Catalog - ' + longType;
+	// })();
+
 	const catalogName = (() => {
-		if (civ == 'CalHub') return civ + ' Multi-Tool Catalog';
-		const longType = (type == 'Standard') ? `${type} Multi-Tool` : type;
-		return civ + ' Multi-Tool Catalog - ' + longType;
+		if (civ == 'CalHub') return 'Multi-Tool Album (Calypso)';
+		else if (civ == 'EisHub') return 'Multi-Tool Album (Eissentam)';
+		else return 'Multi-Tool Album (Euclid)';
 	})();
 
 	const link = wikiLink + catalogName;
@@ -378,12 +426,14 @@ function generateGalleryArray() {
 		'Base Stats',
 		'Minor Settlement',
 		'Sentinel Pillar',
+		'Harmonic Camp',
+		'Monolith',
 		'Tool in hand',
 		'First Person View'
 	];
 
 	const location = pageData.location;
-	const locs = ['Minor Settlement', 'Sentinel Pillar'];
+	const locs = ['Minor Settlement', 'Sentinel Pillar', 'Harmonic Camp', 'Monolith'];
 	if (locs.includes(location)) {
 		const rmLoc = (() => {
 			const index = locs.indexOf(location);
