@@ -112,6 +112,10 @@ function getCreatureData() {
 				}
 			},
 			Flying: {
+				'': {
+        				commonName: '',
+        				produces: ['']
+    				},
 				Agnelis: {
 					commonName: 'Birds',
 					produces: ['Craw Milk']
@@ -134,6 +138,10 @@ function getCreatureData() {
 				}
 			},
 			Underwater: {
+				'': {
+        				commonName: '',
+        				produces: ['']
+    				},
 				Procavaquatica: {
 					commonName: 'Swimming Rodents',
 					produces: ['Wild Milk']
@@ -160,6 +168,10 @@ function getCreatureData() {
 				}
 			},
 			Underground: {
+				'': {
+        				commonName: '',
+        				produces: ['']
+    				},
 				Bos: {
 					commonName: 'Beetles',
 					produces: ["Crab 'Apple'"]
