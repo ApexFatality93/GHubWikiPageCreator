@@ -69,11 +69,31 @@ function genusDropdown() {
 	wikiCode(globalElements.input.genusInput);
 }
 
+// // generates dropdowns for album names
+// function albumDropdown() {
+// 	const creatureData = getCreatureData();
+// 	// if civ is GHub, use GHEC instead. Otherwise use the Civ shortname
+// 	const civ = (pageData.civShort == "GHub") ? "GHEC" : pageData.civShort;
+// 	const ecosystem = pageData.ecosystem;
+// 	const catalogInput = globalElements.input.catalogInput;
+// 	const galaxy = pageData.galaxy;
+
+// 	const albums = creatureData.catalogs[galaxy][ecosystem];
+// 	const albumValues = [albums[0]];
+// 	const albumTexts = [albums[0]];
+// 	// ignore first index (empty option)
+// 	for (let i = 1; i < albums.length; i++) {
+// 		const text = `${civ} ${albums[i]}`;
+// 		albumValues.push(`${text} Album`);
+// 		albumTexts.push(text);
+// 	}
+// 	setDropdownOptions(catalogInput, albumValues, albumTexts);
+// 	storeData(catalogInput);
+// }
+
 // generates dropdowns for album names
 function albumDropdown() {
 	const creatureData = getCreatureData();
-	// if civ is GHub, use GHEC instead. Otherwise use the Civ shortname
-	const civ = (pageData.civShort == "GHub") ? "GHEC" : pageData.civShort;
 	const ecosystem = pageData.ecosystem;
 	const catalogInput = globalElements.input.catalogInput;
 	const galaxy = pageData.galaxy;
@@ -83,8 +103,8 @@ function albumDropdown() {
 	const albumTexts = [albums[0]];
 	// ignore first index (empty option)
 	for (let i = 1; i < albums.length; i++) {
-		const text = `${civ} ${albums[i]}`;
-		albumValues.push(`${text} Album`);
+		const text = `${albums[i]}`;
+		albumValues.push(`${text} Album (${galaxy})`);
 		albumTexts.push(text);
 	}
 	setDropdownOptions(catalogInput, albumValues, albumTexts);
