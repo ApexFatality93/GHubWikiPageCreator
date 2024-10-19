@@ -57,7 +57,12 @@ function genusDropdown() {
 
 	const commonNames = new Array;
 	for (const genus of genera) {
-		commonNames.push(`${genus} (${creatureData.ecosystems[ecosystem][genus].commonName})`);
+		// commonNames.push(`${genus} (${creatureData.ecosystems[ecosystem][genus].commonName})`);
+		if (genus === "") {
+			commonNames.push(`${creatureData.ecosystems[ecosystem][genus].commonName}`);
+		} else {
+			commonNames.push(`${genus} (${creatureData.ecosystems[ecosystem][genus].commonName})`);
+		}
 	}
 
 	setDropdownOptions(globalElements.input.genusInput, genera, commonNames);
