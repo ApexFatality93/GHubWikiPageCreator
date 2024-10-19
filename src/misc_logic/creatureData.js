@@ -180,22 +180,22 @@ function getCreatureData() {
 		},
 		catalogs: {
 			Euclid: {
-				Ground: ['', 'Diplo', '8m+ Fauna', 'Mushroom Beetle', 'T-Rex', 'Strider', 'Bonecat', 'Robot Antelope', 'Flying Beetle', 'Blob', 'Mogara', 'Protoroller'],
-				Flying: ['', 'Butterfly', 'Sporefly', 'Biggerfly', 'Protoflyer', 'Prospects'],
+				Ground: ['', 'Diplo', '8m+ Fauna', 'Mushroom Beetle', 'T-Rex', 'Strider', 'Bonecat', 'Robot Antelope', 'Bug', 'Triceratops', 'Flying Beetle', 'Blob', 'Mogara', 'Protoroller', 'Prospects'],
+				Flying: ['', 'Butterfly', 'Sporefly', 'Large Butterfly', 'Protoflyer', 'Prospects'],
 				Underwater: ['', 'Prionace', 'Jellyfish', 'Prospects'],
 				Underground: ['', 'Mushroom Beetle', 'Blob']
 			},
 			Calypso: {
-				Ground: ['', 'Diplo', 'Mushroom Beetle', 'Rare Fauna'],
-				Flying: ['', 'Rare Fauna'],
-				Underwater: ['', 'Rare Fauna'],
-				Underground: ['', 'Mushroom Beetle', 'Rare Fauna']
+				Ground: ['', 'Diplo', '8m+ Fauna', 'Mushroom Beetle', 'T-Rex', 'Strider', 'Bonecat', 'Robot Antelope', 'Bug', 'Triceratops', 'Flying Beetle', 'Blob', 'Mogara', 'Protoroller', 'Prospects'],
+				Flying: ['', 'Butterfly', 'Sporefly', 'Large Butterfly', 'Protoflyer', 'Prospects'],
+				Underwater: ['', 'Prionace', 'Jellyfish', 'Prospects'],
+				Underground: ['', 'Mushroom Beetle', 'Blob']
 			},
 			Eissentam: {
-				Ground: ['', '8m+ Fauna', 'Mushroom Beetle', 'Anastomus', 'Anomalous', 'Bos', 'Bosoptera', 'Felidae', 'Felihex', 'Hexungulatis', 'Lok', 'Mechanoceris', 'Mogara', 'Osteofelidae', 'Prionterrae', 'Procavya', 'Protosphaeridae', 'Prototerrae', 'Rangifae', 'Reococcyx', 'Spiralis', 'Talpidae', 'Tetraceris', 'Theroma', 'Tyranocae', 'Ungulatis'],
-				Flying: ['', 'Cycromys', 'Oxyacta', 'Protocaeli', 'Butterfly', 'Sporefly', 'Goliath Butterfly'],
-				Underwater: ['', 'Bosaquatica', 'Chrysaora', 'Prionace', 'Prionacefda', 'Procavaquatica'],
-				Underground: ['', 'Mushroom Beetle', 'Bos', 'Lok', 'Procavya', 'Prototerrae']
+				Ground: ['', 'Diplo', '8m+ Fauna', 'Mushroom Beetle', 'T-Rex', 'Strider', 'Bonecat', 'Robot Antelope', 'Bug', 'Triceratops', 'Flying Beetle', 'Blob', 'Mogara', 'Protoroller', 'Prospects'],
+				Flying: ['', 'Butterfly', 'Sporefly', 'Large Butterfly', 'Protoflyer', 'Prospects'],
+				Underwater: ['', 'Prionace', 'Jellyfish', 'Prospects'],
+				Underground: ['', 'Mushroom Beetle', 'Blob']
 			}
 		}
 	}
