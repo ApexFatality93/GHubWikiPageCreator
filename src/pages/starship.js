@@ -533,20 +533,36 @@ function loc() {
 }
 
 // constructs additional information sentence
+// function addInfo() {
+// 	let catalog = '';
+// 	const civ = shortenGHub(pageData.civShort);
+// 	const researchteam = docByResearchteam('GHSH');
+// 	const type = pageData.type;
+
+// 	if (civ != 'CalHub') catalog = ' - ' + type;
+
+// 	if (type == 'Freighter' && civ != 'CalHub') {
+// 		catalog = civ + ' Freighter Catalog';
+// 	} else {
+// 		catalog = civ + ' Starship Catalog' + catalog;
+// 	}
+// 	const output = '[[' + catalog + ']]' + researchteam;
+
+// 	globalElements.output.addInfo.innerText = output;
+// }
+
+// constructs additional information sentence
 function addInfo() {
 	let catalog = '';
-	const civ = shortenGHub(pageData.civShort);
-	const researchteam = docByResearchteam('GHSH');
 	const type = pageData.type;
-
-	if (civ != 'CalHub') catalog = ' - ' + type;
+	const galaxy = pageData.galaxy
 
 	if (type == 'Freighter' && civ != 'CalHub') {
 		catalog = civ + ' Freighter Catalog';
 	} else {
-		catalog = civ + ' Starship Catalog' + catalog;
+		catalog = 'Starship Album' + ' ' + '(' + galaxy + ')';
 	}
-	const output = '[[' + catalog + ']]' + researchteam;
+	const output = '[[' + catalog + ']].';
 
 	globalElements.output.addInfo.innerText = output;
 }
