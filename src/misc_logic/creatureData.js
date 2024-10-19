@@ -2,6 +2,10 @@ function getCreatureData() {
 	return {
 		ecosystems: {
 			Ground: {
+				'': {
+        				commonName: '',
+        				produces: ['']
+    				},
 				Anastomus: {
 					commonName: 'Striders',
 					produces: ['Tall Eggs']
