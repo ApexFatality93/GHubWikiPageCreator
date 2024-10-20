@@ -350,9 +350,9 @@ function generateGalleryArray() {
 	const array = [
 		'',
 		`${gender1} gender`,
-		`${gender1} gender scan`,
+		`${gender1} scan`,
 		`${gender2} gender`,
-		`${gender2} gender scan`,
+		`${gender2} scan`,
 		'Creature scan',
 		'Discovery Menu',
 		'Moon Page',
