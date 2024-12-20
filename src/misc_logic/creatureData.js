@@ -16,7 +16,7 @@ function getCreatureData() {
 				},
 				Arthropodae: {
 					commonName: 'Bugs',
-					produces: ['Nourshing Slime']
+					produces: ['Nourishing Slime']
 				},
 				Bos: {
 					commonName: 'Beetles',
