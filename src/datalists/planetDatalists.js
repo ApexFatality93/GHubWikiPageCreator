@@ -88,6 +88,7 @@ function getResourceData() {
 		'Salvageable Scrap': 'Sa',
 		'Rusted Metal': 'Jn',
 		'Basalt': 'B',
+		'Quartzite': 'Qu',
 	}
 	return resources;
 };
