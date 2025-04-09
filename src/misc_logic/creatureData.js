@@ -165,7 +165,23 @@ function getCreatureData() {
 				Prionacefda: {
 					commonName: 'Swimming cows',
 					produces: ['Wild Milk']
-				}
+				},
+				Mobula: {
+					commonName: 'Manta Rays',
+					produces: ['']
+				},
+				Hippocampus: {
+					commonName: 'Seahorses',
+					produces: ['']
+				},
+				Crustacea: {
+					commonName: 'Prawns',
+					produces: ['']
+				},
+				Krakenidae: {
+					commonName: 'Squids',
+					produces: ['']
+				}				
 			},
 			Underground: {
 				'': {
