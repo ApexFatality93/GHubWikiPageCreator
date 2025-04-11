@@ -84,7 +84,7 @@ const regions = {
 		"09557D30": 'Fujial Void',
 		"09557D2F": 'Lugalus Fringe',
 		"09556D2F": 'Aidjog',
-		"09555D2F": 'Irtlan Expanse',
+		"09555D2F": 'Irtlin Expanse',
 		"0A556D30": 'Kianso Terminus',
 		"0A555D30": 'Yithrun Expanse',
 		"0A555D31": 'Guyardm Band',
