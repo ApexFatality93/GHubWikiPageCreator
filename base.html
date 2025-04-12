@@ -161,20 +161,30 @@
 							<data>
 								<div class='dialog-center'>
 									<ul class='dialog-list'>
-										<li>Artistic</li>
-										<li>Embassy</li>
-										<li>Farm</li>
-										<li>Headquarters</li>
-										<li>Industrial</li>
-										<li>Memorial</li>
-										<li>Residential</li>
+										<li>Activity: racetracks, puzzles, obstacle courses, mazes, mini games, etc. </li>
+										<li>Artistic: sculptures, abstract builds, museums, ByteBeat bases, etc.</li>
+										<li>Business: HC headquarters, restaurants, storefronts, etc.</li>
+										<li>Combat: PvP or PvE arenas, Sentinel defense outposts, battle simulators, etc.</li>
+										<li>Immersive: research labs, alien temples, pirate outposts nature preserves, etc.</li>
+										<li>Production: farms, mines, factories, refiners, etc.</li>
+										<li>Residential: personal homes, neighborhoods, apartment complexes, hotels, etc.</li>
 									</ul>
 								</div>
 							</data>
 						</span>
 					</div>
 					<div class="tableCell data">
-						<input type="text" data-dest="type" id="typeInput">
+						<!-- <input type="text" data-dest="type" id="typeInput"> -->
+						<select data-dest="type" id="typeInput">
+							<option value=""></option>
+							<option value="Activity">Activity</option>
+							<option value="Artistic">Artistic</option>
+							<option value="Business">Business</option>
+							<option value="Combat">Combat</option>
+							<option value="Immersive">Immersive</option>
+							<option value="Production">Production</option>
+							<option value="Residential">Residential</option>
+						</select>
 					</div>
 					<div class="tableCell text">
 						<label>Gamemode:</label>
