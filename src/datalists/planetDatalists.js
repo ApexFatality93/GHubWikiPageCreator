@@ -64,6 +64,7 @@ function getResourceData() {
 		'Activated Cadmium': 'Cd+',
 		'Activated Emeril': 'Em+',
 		'Activated Indium': 'In+',
+		'Activated Quartzite': 'Qu+',
 		'Ammonia': 'NH3',
 		'Dioxite': 'CO2',
 		'Paraffinium': 'Pf',
