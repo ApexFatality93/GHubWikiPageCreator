@@ -289,6 +289,36 @@ function getShipData() {
 				axesInput: ['show']
 			}
 		},
+		Derelict: {
+			cost: {
+				'': '',
+			},
+			slots: {
+				'': '',
+			},
+			techslots: {
+				'': '',
+			},
+			subtypes: [''],
+			secParts: [''],
+			accessories: [''],
+			miscParts: [''],
+			sections: {
+				subtypeInput: ['hide'],
+				exoticInput: ['hide', ''],
+				pilotInput: ['hide', ''],
+				inventoryInput: ['hide', ''],
+				maneuverBInput: ['hide', ''],
+				damageBInput: ['hide', ''],
+				shieldBInput: ['hide', ''],
+				warpBInput: ['hide', ''],
+				economyInput: ['show'],
+				planetInput: ['hide', ''],
+				moonInput: ['hide', ''],
+				axesInput: ['hide', ''],
+				classInput: ['show'],
+			}
+		},
 		"Interceptor": {
 			cost: {
 				'Large': '',
@@ -464,6 +494,8 @@ function introType() {
 function shipType() {
 	if (pageData.type == 'Freighter') {
 		return 'freighter';
+	} else if (pageData.type == 'Derelict') {
+		return 'derelict';
 	} else {
 		return 'starship';
 	}
@@ -515,13 +547,20 @@ function loc() {
 		return `on the ${celestialBody} at the coordinates ${axes}`
 	}
 
+	// Determines the method of derelict spawn
+	// Returns a sentence describing the derelict spawn location.
+	function derelictSpawn() {
+		return `after activating an [[Emergency Signal Scanner]] and pulsing around in the star system.`
+	}
+
 	// Constructs the location sentence based on ship type
 	// Returns the location sentence.
 	function locText() {
 		switch (type) {
 			case 'Freighter':
 				return freighterSpawn();
-
+			case 'Derelict':
+					return derelictSpawn();
 			case 'Interceptor':
 			case 'Living Ship':
 				return livingShipSpawn();
@@ -557,8 +596,10 @@ function addInfo() {
 	const type = pageData.type;
 	const galaxy = pageData.galaxy
 
-	if (type == 'Freighter' && civ != 'CalHub') {
-		catalog = civ + ' Freighter Catalog';
+	if (type == 'Freighter') {
+		catalog = 'Freighter Album' + ' ' + '(' + galaxy + ')';
+	} else if (type == 'Derelict') {
+		catalog = 'Derelict Album' + ' ' + '(' + galaxy + ')';
 	} else {
 		catalog = 'Starship Album' + ' ' + '(' + galaxy + ')';
 	}
