@@ -30,7 +30,7 @@ function addMoon(element) {
 	const moonInputSectionCount = document.querySelectorAll('[data-moon]').length / 2;
 
 	// enter the number of sections you want to allow behind the ">" operator.
-	if (moonInputSectionCount + 1 > 2) {
+	if (moonInputSectionCount + 1 > 4) {
 		element.disabled = true;
 	}
 }
