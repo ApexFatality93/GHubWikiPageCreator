@@ -62,7 +62,7 @@ const regions = {
 		FA557C31: 'Itsaka Expanse',
 		FA557C30: 'Yehimbi',
 		FA557C2F: 'Tesinio Expanse',
-		FA556C2F: 'Sea of Ebbeg',
+		FA556C2F: 'Sea of Ebbegg',
 		FA555C2F: 'Trzesi Cluster',
 		F8555C30: 'Egezesi',
 		F8555C31: 'Haweiweu Terminus',
