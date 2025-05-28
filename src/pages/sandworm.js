@@ -3,6 +3,7 @@ function startupFunctions() {
 	catalog();
 	autoSpawn();
 	albumFunctions();
+	planetMoonSentence();
 }
 
 const sandwormElements = {
@@ -14,8 +15,8 @@ updateGlobalElements(sandwormElements);
 
 const sandwormElementFunctions = {
 	civ: ['catalog(); albumItemType()', null, true],
-	planetInput: ['wormName(); albumName()'],
-	moonInput: ['wormName(); albumName()'],
+	planetInput: ['wormName(); albumName(); planetMoonSentence()'],
+	moonInput: ['wormName(); albumName(); planetMoonSentence()'],
 	autoSpawn: ['autoSpawn()'],
 	researchTeam: ['catalog()', null, true],
 	wormclassInput: ['albumName()'],
