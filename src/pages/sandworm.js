@@ -62,24 +62,25 @@ function autoSpawn() {
 	addInfoBullet();
 }
 
-// adds "documented by GHEC" sentence
+// adds featured in album sentence
 function catalog() {
 	const research = docByResearchteam('GHEC');
 
 	const album = (() => {
-		switch (pageData.civShort) {
-			case "GHub":
-				return "GHEC Sandworm";
+		switch (pageData.galaxy) {
+			case "Euclid":
+				return "Euclid";
 
-			case "CalHub":
-				return "CalHub Rare Fauna";
+			case "Calypso":
+				return "Calypso";
 
-			case "EisHub":
-				return "EisHub Shaihuluda";
+			case "Eissentam":
+				return "Eissentam";
 		}
 	})();
-	const albumName = `${album} Album`;
-	const output = `[[${albumName}]]${research}`;
+	const albumName = `Sandworm Album (${album}).`;
+	// const output = `[[${albumName}]]${research}`;
+	const output = `[[${albumName}]]`;
 
 	wikiCode(output, 'addInfo');
 	addInfoBullet();
