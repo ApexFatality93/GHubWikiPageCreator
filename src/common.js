@@ -107,6 +107,7 @@ const regions = {
 }
 
 const versions = [
+	'Beacon',
 	'Relics',
 	'Worlds2',
 	'Aquarius',
