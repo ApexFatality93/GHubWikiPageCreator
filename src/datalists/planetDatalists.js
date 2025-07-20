@@ -659,6 +659,7 @@ function getDescriptorData() {
 			'Ample',
 			'Frequent',
 			'Full',
+			'Synthetic',
 			'Generous',
 			'Average',
 			'Regular',
