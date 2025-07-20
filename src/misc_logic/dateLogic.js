@@ -9,3 +9,26 @@ function getCurrentYear(outputId) {
 
 	wikiCode(currentYear.toString(), outputId);
 }
+
+document.addEventListener("DOMContentLoaded", function () {
+	const lastEditedField = document.getElementById("lastEditedInput");
+
+	if (lastEditedField && lastEditedField.value.trim() === "") {
+		const today = new Date();
+		let formatted = "YYYY-MM-DD"; // fallback default
+
+		if (!isNaN(today.getTime())) {
+			const year = today.getFullYear();
+			const month = String(today.getMonth() + 1).padStart(2, '0');
+			const day = String(today.getDate()).padStart(2, '0');
+			formatted = `${year}-${month}-${day}`;
+		}
+
+		lastEditedField.value = formatted;
+
+		const dest = lastEditedField.dataset.dest;
+		if (typeof wikiCode === "function" && dest) {
+			wikiCode(formatted, dest);
+		}
+	}
+});
